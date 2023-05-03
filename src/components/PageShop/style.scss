@@ -1,0 +1,40 @@
+.pop-product{
+  margin-top: 60px;
+  h4{
+    text-align: center;
+    font-family: 'Hind Siliguri';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.145em;
+    text-transform: uppercase;
+    color: #C72535;
+  }
+  h2{
+    text-align: center;
+    font-family: 'Hind Siliguri';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 71px;
+
+
+  }
+  ul{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style-type:none;
+    font-family: 'Hind Siliguri';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: #030D15;
+    opacity: 0.6;
+  }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../assets/Group 165.png';
 import './style.scss'
+import { Link } from 'react-router-dom'
 
 
 const Header = () => {
@@ -8,14 +9,14 @@ const Header = () => {
        <div className= {'container'}>
            <div className={'infoLogo'}>
                <div>
-                   <img src={logo}  alt=""/>
+                   <Link to='/'><img src={logo} alt=""/></Link>
                </div>
 
                <nav>
                    <ul className={'infoLogo-nav'}>
-                       <li>Home</li>
+                       <Link style={{textDecoration:'none'}} to='/'>Home</Link>
+                       <Link style={{textDecoration:'none'}} to='shop'>Product</Link>
                        <li>About</li>
-                       <li>Product</li>
                        <li>Blog</li>
                        <li>Shop</li>
                        <li>Contact US</li>
