@@ -13,7 +13,7 @@ export  const getProduct =()=>{
 export const AddProduct =(value)=>{
     return (dispatch) =>{
         console.log(value)
-        axios(`https://64363d318205915d34eec114.mockapi.io/users/${value.products}`)
+        axios(`https://64357ec2537112453fd7f9f7.mockapi.io/users/${value.products}`)
             .then(({data}) =>{
                 dispatch({type: ADD_PRODUCT, payload: data})
 
