@@ -1,7 +1,9 @@
 import React from 'react';
 import './style.scss'
+import List from "../../components/List/index";
 
-const PageShop = () => {
+
+const PageShop = ({products}) => {
     return (
         <div className={'pop-product'}>
             <h4>New Products</h4>
@@ -14,6 +16,13 @@ const PageShop = () => {
                     <li>featured in</li>
                 </ul>
             </nav>
+            <div>
+            <List products={products}/>
+            </div>
+
+        };
+
+
         </div>
     );
 };
