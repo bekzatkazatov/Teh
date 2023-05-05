@@ -1,8 +1,13 @@
 .wrapper-buttons{
   background: #FAFAFA;
- padding-top: 5px;
+  padding-top: 5px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  button{
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
 }

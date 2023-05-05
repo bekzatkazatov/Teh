@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss'
-import List from "../../components/List/index";
+import List from "../components/List/index";
 
 
 const PageShop = ({products}) => {

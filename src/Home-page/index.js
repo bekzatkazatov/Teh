@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionSpeakers from "../SectionSpeakers";
+import SectionSpeakers from "../components/SectionSpeakers";
 
 const Homepage = () => {
     return (
