@@ -6,6 +6,7 @@ import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {getProduct} from "./Redux/action/action";
+import BasketPage from "./Basket-page";
 
 
 function App () {
@@ -21,6 +22,7 @@ function App () {
               <Routes>
                   <Route path='/' element={ <Homepage />}/>
                   <Route path="/shop" element={<PageShop products={products}/>} />
+                  <Route path="/basket" element={<BasketPage/>} />
               </Routes>
           </BrowserRouter>
       </div>
