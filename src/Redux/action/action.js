@@ -1,5 +1,5 @@
 import axios from "axios";
-import {ADD_PRODUCT, GET_PRODUCT} from "../Types";
+import {ADD_PRODUCT, GET_PRODUCT,DELETE_PRODUCT} from "../Types";
 
 
 export const getProduct = () => {
@@ -13,5 +13,10 @@ export const getProduct = () => {
 export const AddProduct = (product) => {
     return (dispatch) => {
         dispatch({type: ADD_PRODUCT, payload: product})
+    }
+}
+export const DeleteProduct = (id) => {
+    return (dispatch) => {
+        dispatch({type: DELETE_PRODUCT, payload: id})
     }
 }

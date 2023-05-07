@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import './style.scss'
+import {DeleteProduct} from "../Redux/action/action";
 
 
 const BasketPage = () => {
     const cards = useSelector(state => state.cards)
-    const [basketItems, setBasketItems] = useState(cards.map(card => ({...card, count: 1})));
+    const dispatch = useDispatch()
+
+    const [basketItems, setBasketItems] = useState(cards.map(card => ({...card, count: 1,
+    })));
     const inCrease = (id) => {
         const newItems = basketItems.map(item => item.id === id ? {...item, count: item.count + 1} : item)
         setBasketItems(newItems)
@@ -14,23 +18,30 @@ const BasketPage = () => {
         const newItems = basketItems.map(item => item.id === id ? {...item, count: item.count - 1} : item)
         setBasketItems(newItems)
     }
+    const deleteItem = (id) => {
+        const newItems = basketItems.filter(item => item.id !== id)
+        setBasketItems(newItems)
+        dispatch(DeleteProduct(id))
+    }
     return (
         <div>
             {
                 basketItems.map(card => (
-                   <div className={'container'}>
-                       <div className={'productbox'}>
-                           <img className={'productbox-img'} src={card.imageUrl} alt=""/>
-                           <h3>{card.productName}</h3>
-                           <h4>{card.price}</h4>
+                    <div key={card.id} className={'container'}>
+                        <div className={'productbox'}>
+                            <img className={'productbox-img'} src={card.imageUrl} alt=""/>
+                            <h3>{card.productName}</h3>
 
-
-                               <button disabled={card.amount === card.count} onClick={() => inCrease(card.id)}>+</button>
-                               <h3>{card.count}</h3>
-                               <button disabled={card.count === 0} onClick={() => deCrease(card.id)}>-</button>
-
-                       </div>
-                   </div>
+                            <div style={{display:"flex",gap:'30px'}}>
+                                <h4>{card.price}c</h4>
+                                <button disabled={card.count === 0} onClick={() => deCrease(card.id)}>-</button>
+                                <h3>{card.count}</h3>
+                                <button disabled={card.amount === card.count} onClick={() => inCrease(card.id)}>+</button>
+                                <button onClick={() => deleteItem(card.id)}>x</button>
+                                <h3>{card.count * card.price}c</h3>
+                            </div>
+                        </div>
+                    </div>
                 ))
             }
         </div>

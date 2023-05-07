@@ -28,7 +28,7 @@ const List = ({products}) => {
                                 </div>
                                 <div className="productList-box__description">
                                     <h3>{product.productName}</h3>
-                                    <h4>{product.price}</h4>
+                                    <h4>{product.price}c</h4>
                                     <h4>{product.rate}</h4>
                                 </div>
                             </div>
