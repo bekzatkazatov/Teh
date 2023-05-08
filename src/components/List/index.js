@@ -3,7 +3,7 @@ import ButtonAction from "../ButtonAction";
 import {useDispatch, useSelector} from "react-redux";
 import {AddProduct} from "../../Redux/action/action";
 import './style.scss'
-import StarRating from "../Starlogo/starRange";
+import StarRating from "../StarRate/starRange";
 
 
 const List = ({products}) => {

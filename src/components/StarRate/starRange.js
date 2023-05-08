@@ -1,5 +1,5 @@
 import React from 'react';
-import Star from '../Starlogo/star';
+import Star from './star';
 import './style.scss'
 
 
